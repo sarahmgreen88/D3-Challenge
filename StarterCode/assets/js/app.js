@@ -66,7 +66,6 @@ d3.csv("data.csv").then(function(demoData) {
     .attr("fill", "blue")
     .attr("opacity", "1");
 
-    // var circleLabels = chartGroup.selectAll(null).data(demoData).enter().append("text");
       chartGroup
         .append("g")
         .selectAll("text")
@@ -84,40 +83,6 @@ d3.csv("data.csv").then(function(demoData) {
         .attr("alignment-baseline", "central")
         .attr("fill", "white");
 
-    // chartGroup
-    //     .append("text")
-    //     .attr("x", d => xLinearScale(d.poverty))
-    //     .attr("y", d => yLinearScale(d.healthcare))
-    //     .text(d => d.abbr)        
-    //     .attr("font-family", "sans-serif")
-    //     .attr("font-size", "12px")
-    //     .attr("text-anchor", "middle")
-    //     .attr("fill", "white");
-
-
-    // // Step 6: Initialize tool tip
-    // // ==============================
-    // var toolTip = d3.tip()
-    //   .attr("class", "tooltip")
-    //   .offset([80, -60])
-    //   .html(function(d) {
-    //     return (`${d.abbr}`);
-    //   });
-
-
-    // // Step 7: Create tooltip in the chart
-    // // ==============================
-    // chartGroup.call(toolTip);
-
-    // // Step 8: Create event listeners to display and hide the tooltip
-    // // ==============================
-    // circlesGroup.on("click", function(data) {
-    //   toolTip.show(data, this);
-    // })
-    //   // onmouseout event
-    //   .on("mouseout", function(data, index) {
-    //     toolTip.hide(data);
-    //   });
 
     // Create axes labels
     chartGroup.append("text")
